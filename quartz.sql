@@ -1,9 +1,9 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 192.168.23.128
+Source Server         : 192.xxx.xx.xxx
 Source Server Version : 50725
-Source Host           : 192.168.23.128:3306
+Source Host           : 192.xxx.xx.xxx:3306
 Source Database       : quartz
 
 Target Server Type    : MYSQL

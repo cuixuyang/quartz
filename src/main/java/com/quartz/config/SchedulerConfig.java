@@ -37,7 +37,6 @@ public class SchedulerConfig {
         //自定义jobFactory  用于注入
         factoryBean.setJobFactory(jobfactory);
         factoryBean.setQuartzProperties(quartzProperties());
-        System.out.println("---------"+ quartzProperties().getProperty("org.quartz.scheduler.instanceName"));
         return factoryBean;
     }
 
