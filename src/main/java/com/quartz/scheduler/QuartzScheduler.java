@@ -155,6 +155,9 @@ public class QuartzScheduler {
         CronScheduleBuilder cronScheduleBuilder =
                 CronScheduleBuilder.cronSchedule("0 0 0 */1 * ?");
 //                CronScheduleBuilder.cronSchedule("0 0/1 * * * ?");
+
+        //处理misfire，不触发立即执行等待下次Cron触发频率到达时刻开始按照Cron频率依次执行，默认为withMisfireHandlingInstructionFireAndProceed（当前时间立即执行）
+        cronScheduleBuilder.withMisfireHandlingInstructionDoNothing();
         //创建一个Trigger触发器的实例，定义该job立即执行，并且按规则执行
         CronTrigger cronTrigger = TriggerBuilder.newTrigger().withIdentity("trigger","trigger_group").
                 withSchedule(cronScheduleBuilder).build();
